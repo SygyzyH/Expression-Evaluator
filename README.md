@@ -50,6 +50,7 @@ Start by considering the polar form of the first argument
 Where
 
 ![alt text](https://latex.codecogs.com/svg.latex?r=\sqrt{a^{2}+b^{2}})
+
 ![alt text](https://latex.codecogs.com/svg.latex?\theta=\arcsin\left(\frac{b}{r}\right))
 
 We keep all arguments in the exponent, to make the following calculations cleaner, giving
@@ -71,6 +72,7 @@ Using power rules. We can simplify the expression slightly to seperate real and 
 We can assing a few repeating arguments to clean up even further, and save on calculation time
 
 ![alt text](https://latex.codecogs.com/svg.latex?g=e^{\ln\left(r\right)c-\theta d})
+
 ![alt text](https://latex.codecogs.com/svg.latex?v=fd+\theta c)
 
 Next, using Euler's formula, we can find the real and complex components of the expression as
