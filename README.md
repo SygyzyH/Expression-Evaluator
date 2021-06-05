@@ -67,7 +67,7 @@ Is equivelant to
 
 Using power rules. We can simplify the expression slightly to seperate real and complex components
 
-![alt text](https://latex.codecogs.com/svg.latex?e^{\ln\left(r\right)c}e^{\ln\left(r\right)d}e^{i\theta}e^{-\theta})
+![alt text](https://latex.codecogs.com/svg.latex?e^{\ln\left(r\right)c}e^{\ln\left(r\right)d}e^{ic\theta}e^{-d\theta})
 
 We can assing a few repeating arguments to clean up even further, and save on calculation time
 
