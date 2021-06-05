@@ -28,7 +28,19 @@ Reform the expression to form a + bi
 And thats how we get the new real - complex number pair.
 
 ## Division
+To devide two complex numbers, we first need to multiply by the conjugate. The conjugate would be the denominator except its complex part is flipped. Thus we get
 
+![alt text](https://latex.codecogs.com/svg.latex?\frac{\left(a+bi\right)\left(c-di\right)}{\left(c+di\right)\left(c-di\right)})
+
+As the solution to the division. Next, we can open the parentheses via multiplication to get
+
+![alt text](https://latex.codecogs.com/svg.latex?\frac{ac-adi+cbi+bd}{c^{2}-cdi+cdi+d^{2}})
+
+We can seperate the terms to real and complex of form a + bi to get
+
+![alt text](https://latex.codecogs.com/svg.latex?\frac{ac+bd}{c^{2}+d^{2}}+\frac{-ad+cb}{c^{2}+d^{2}}i)
+
+We can calculate the denominator only once, and use it twice in the final calculation, to save some time.
 
 ## Exponentiation
 
