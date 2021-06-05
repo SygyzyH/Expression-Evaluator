@@ -77,7 +77,7 @@ We can assing a few repeating arguments to clean up even further, and save on ca
 
 Next, using Euler's formula, we can find the real and complex components of the expression as
 
-![alt text](https://latex.codecogs.com/svg.latex?\textbf{g\left(\cos\left(v\right)+i\sin\left(v\right)\right)})
+![alt text](https://latex.codecogs.com/svg.latex?\textbf{g}\left(\cos\left(v\right)+i\sin\left(v\right)\right))
 
 Giving the final solution of form a + bi. 
 
