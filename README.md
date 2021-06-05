@@ -79,4 +79,10 @@ Next, using Euler's formula, we can find the real and complex components of the 
 
 ![alt text](https://latex.codecogs.com/svg.latex?g\left(\cos\left(v\right)+i\sin\left(v\right)\right))
 
-Giving the final solution of form a + bi.
+Giving the final solution of form a + bi. 
+
+To save some time, using the assignment
+
+![alt text](https://latex.codecogs.com/svg.latex?f=\ln\left(r\right))
+
+Also helps.
