@@ -43,4 +43,38 @@ We can seperate the terms to real and complex of form a + bi to get
 We can calculate the denominator only once, and use it twice in the final calculation, to save some time.
 
 ## Exponentiation
+Start by considering the polar form of the first argument
 
+![alt text](https://latex.codecogs.com/svg.latex?\left(a+bi\right)=re^{i\theta})
+
+Where
+
+![alt text](https://latex.codecogs.com/svg.latex?r=\sqrt{a^{2}+b^{2}})
+![alt text](https://latex.codecogs.com/svg.latex?\theta=\arcsin\left(\frac{b}{r}\right))
+
+We keep all arguments in the exponent, to make the following calculations cleaner, giving
+
+![alt text](https://latex.codecogs.com/svg.latex?e^{\ln\left(r\right)i\theta})
+
+Thus, we can derive that
+
+![alt text](https://latex.codecogs.com/svg.latex?\left(a+bi\right)^{\left(c+di\right)})
+
+Is equivelant to
+
+![alt text](https://latex.codecogs.com/svg.latex?e^{\left(\ln\left(r\right)i\theta\right)\left(c+di\right)})
+
+Using power rules. We can simplify the expression slightly to seperate real and complex components
+
+![alt text](https://latex.codecogs.com/svg.latex?e^{\ln\left(r\right)c}e^{\ln\left(r\right)d}e^{i\theta c}e^{-\theta d})
+
+We can assing a few repeating arguments to clean up even further, and save on calculation time
+
+![alt text](https://latex.codecogs.com/svg.latex?g=e^{\ln\left(r\right)c-\theta d})
+![alt text](https://latex.codecogs.com/svg.latex?v=fd+\theta c)
+
+Next, using Euler's formula, we can find the real and complex components of the expression as
+
+![alt text](https://latex.codecogs.com/svg.latex?g\left(\cos\left(v\right)+i\sin\left(v\right)\right))
+
+Giving the final solution of form a + bi.
