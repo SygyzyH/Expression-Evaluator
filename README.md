@@ -85,4 +85,4 @@ To save some time, using the assignment
 
 ![alt text](https://latex.codecogs.com/svg.latex?f=\ln\left(r\right))
 
-Also helps.
+Helps.
