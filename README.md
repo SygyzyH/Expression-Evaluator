@@ -15,7 +15,7 @@ I belive some of the methods I used to evaluate the complex components of the ex
 ## Multiplication
 Start with the basic multipliaction expression we have to deal with.
 
-![alt text](https://latex.codecogs.com/svg.latex?/\left(a%2Bbi\right)\cdot\left(c%2Bdi\right))
+![alt text](https://latex.codecogs.com/svg.latex?\left(a%2Bbi\right)\cdot\left(c%2Bdi\right))
 
 ## Division
 
