@@ -73,7 +73,7 @@ We can assing a few repeating arguments to clean up even further, and save on ca
 
 ![alt text](https://latex.codecogs.com/svg.latex?g=e^{\ln\left(r\right)c-\theta\d})
 
-![alt text](https://latex.codecogs.com/svg.latex?v=fd+\theta\c)
+![alt text](https://latex.codecogs.com/svg.latex?v=fd+\theta)
 
 Next, using Euler's formula, we can find the real and complex components of the expression as
 
