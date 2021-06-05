@@ -71,7 +71,7 @@ Using power rules. We can simplify the expression slightly to seperate real and 
 
 We can assing a few repeating arguments to clean up even further, and save on calculation time
 
-![alt text](https://latex.codecogs.com/svg.latex?g=e^{\ln\left(r\right)c-\theta\d})
+![alt text](https://latex.codecogs.com/svg.latex?g=e^{\ln\left(r\right)c-d\theta})
 
 ![alt text](https://latex.codecogs.com/svg.latex?v=fd+c\theta)
 
