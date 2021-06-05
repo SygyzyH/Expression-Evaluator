@@ -17,6 +17,16 @@ Start with the basic multipliaction expression we have to deal with.
 
 ![alt text](https://latex.codecogs.com/svg.latex?\left(a%2Bbi\right)\cdot\left(c%2Bdi\right))
 
+Than, we open the parentheses via multiplication to get
+
+![alt text](https://latex.codecogs.com/svg.latex?ac+adi+bic-bd)
+
+Reform the expression to form a + bi
+
+![alt text](https://latex.codecogs.com/svg.latex?ac-bd\+i\left(ad+bc\right))
+
+And thats how we get the new real - complex number pair.
+
 ## Division
 
 
