@@ -67,13 +67,13 @@ Is equivelant to
 
 Using power rules. We can simplify the expression slightly to seperate real and complex components
 
-![alt text](https://latex.codecogs.com/svg.latex?e^{\ln\left(r\right)c}e^{\ln\left(r\right)d}e^{i\theta c}e^{-\thetad})
+![alt text](https://latex.codecogs.com/svg.latex?e^{\ln\left(r\right)c}e^{\ln\left(r\right)d}e^{i\theta c}e^{-\theta\d})
 
 We can assing a few repeating arguments to clean up even further, and save on calculation time
 
-![alt text](https://latex.codecogs.com/svg.latex?g=e^{\ln\left(r\right)c-\thetad})
+![alt text](https://latex.codecogs.com/svg.latex?g=e^{\ln\left(r\right)c-\theta\d})
 
-![alt text](https://latex.codecogs.com/svg.latex?v=fd+\thetac)
+![alt text](https://latex.codecogs.com/svg.latex?v=fd+\theta\c)
 
 Next, using Euler's formula, we can find the real and complex components of the expression as
 
