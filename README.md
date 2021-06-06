@@ -53,7 +53,7 @@ Where
 
 ![alt text](https://latex.codecogs.com/svg.latex?\varphi=\arcsin\left(\frac{b}{r}\right))
 
-We keep all arguments in the exponent, to make the following calculations cleaner, giving
+Well keep all arguments in the exponent, to make the following calculations cleaner, giving
 
 ![alt text](https://latex.codecogs.com/svg.latex?e^{\ln\left(r\right)i\varphi})
 
