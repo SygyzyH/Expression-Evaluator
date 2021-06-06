@@ -45,17 +45,17 @@ We can calculate the denominator only once, and use it twice in the final calcul
 ## Exponentiation
 Start by considering the polar form of the first argument
 
-![alt text](https://latex.codecogs.com/svg.latex?\left(a+bi\right)=re^{i\theta})
+![alt text](https://latex.codecogs.com/svg.latex?\left(a+bi\right)=re^{i\varphi})
 
 Where
 
 ![alt text](https://latex.codecogs.com/svg.latex?r=\sqrt{a^{2}+b^{2}})
 
-![alt text](https://latex.codecogs.com/svg.latex?\theta=\arcsin\left(\frac{b}{r}\right))
+![alt text](https://latex.codecogs.com/svg.latex?\varphi=\arcsin\left(\frac{b}{r}\right))
 
 We keep all arguments in the exponent, to make the following calculations cleaner, giving
 
-![alt text](https://latex.codecogs.com/svg.latex?e^{\ln\left(r\right)i\theta})
+![alt text](https://latex.codecogs.com/svg.latex?e^{\ln\left(r\right)i\varphi})
 
 Thus, we can derive that
 
@@ -67,13 +67,13 @@ Is equivelant to
 
 Using power rules. We can simplify the expression slightly to seperate real and complex components
 
-![alt text](https://latex.codecogs.com/svg.latex?e^{\ln\left(r\right)c}e^{i\ln\left(r\right)d}e^{ic\theta}e^{-d\theta})
+![alt text](https://latex.codecogs.com/svg.latex?e^{\ln\left(r\right)c}e^{i\ln\left(r\right)d}e^{ic\varphi}e^{-d\varphi})
 
 We can assing a few repeating arguments to clean up even further, and save on calculation time
 
-![alt text](https://latex.codecogs.com/svg.latex?g=e^{\ln\left(r\right)c-d\theta})
+![alt text](https://latex.codecogs.com/svg.latex?g=e^{\ln\left(r\right)c-d\varphi})
 
-![alt text](https://latex.codecogs.com/svg.latex?v=\ln\left(r\right)d+c\theta)
+![alt text](https://latex.codecogs.com/svg.latex?v=\ln\left(r\right)d+c\varphi)
 
 Next, using Euler's formula, we can find the real and complex components of the expression as
 
