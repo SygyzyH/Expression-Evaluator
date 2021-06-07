@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Parser {
 
-    private static final boolean DEBUG = true;
+    private static final boolean DEBUG = false;
 
     public static Component parseString(String expressionString) {
         Token[] tokens = tokenizeString(expressionString);
@@ -24,7 +24,7 @@ public class Parser {
             }
 
         if (output.size() != 1)
-            System.err.println("String parsing unk error");
+            throw new ExpressionParseException("Unk");
 
         return output.pop();
     }
@@ -36,7 +36,7 @@ public class Parser {
         for (Token token : tokens) {
             if (token.type == ComponentToken.EQUALITY)
                 token = new Token(ComponentToken.SUBTRACTION);
-            if (token.type.getIsOperator()) {
+            if (token.type.getIsOperator() || token.type == ComponentToken.OPEN_PARENTHESES || token.type == ComponentToken.CLOSE_PARENTHESES) {
                 if (token.type == ComponentToken.CLOSE_PARENTHESES) {
 
                     while (operatorStack.peek().type != ComponentToken.OPEN_PARENTHESES)
@@ -84,7 +84,6 @@ public class Parser {
         for (int i = 0; i < expressionString.length(); i++) {
             char c = expressionString.charAt(i);
 
-            // immediates
             if (Character.isDigit(c)) {
                 Token lastToken = getLastToken(tokens);
                 if (lastToken != null) switch (lastToken.type) {
@@ -103,7 +102,6 @@ public class Parser {
             }
 
             switch (c) {
-            // operators
                 case '+':
                     tokens.add(new Token(ComponentToken.ADDITION));
                     break;
@@ -189,6 +187,9 @@ public class Parser {
                     }
                     break;
                 }
+
+                default:
+                    throw new ExpressionParseException("unrecognized symbol");
             }
         }
 
@@ -199,12 +200,67 @@ public class Parser {
             System.out.println();
         }
 
-        return tokens.toArray(new Token[0]);
+        Token[] t = tokens.toArray(new Token[0]);
+
+        checkTokenizedString(t);
+
+        return t;
     }
 
     private static Token getLastToken(List<Token> tokens) {
         if (tokens.size() > 0)
             return tokens.get(tokens.size() - 1);
         return null;
+    }
+
+    private static void checkTokenizedString(Token[] tokens) {
+        int parenthesesCount = 0;
+        boolean equalitySeen = false;
+
+        if (tokens[0].type.getIsOperator())
+            throw new ExpressionParseException("Operator at start-of-expression");
+        if (tokens[tokens.length - 1].type.getIsOperator())
+            throw new ExpressionParseException("hanging operator at end-of-expression");
+
+        for (int i = 0; i < tokens.length; i++) {
+            Token token = tokens[i];
+
+            switch (token.type) {
+                case OPEN_PARENTHESES:
+                    parenthesesCount++;
+                    break;
+                case CLOSE_PARENTHESES:
+                    parenthesesCount--;
+                    break;
+                case EQUALITY:
+                    if (equalitySeen)
+                        throw new ExpressionParseException("too many equality signs");
+                    else
+                        equalitySeen = true;
+                    break;
+                case ADDITION:
+                case SUBTRACTION:
+                case MULTIPLICATION:
+                case DIVISION:
+                case EXPONENTIATION:
+                    switch (tokens[i - 1].type) {
+                        case ADDITION:
+                        case SUBTRACTION:
+                        case MULTIPLICATION:
+                        case DIVISION:
+                        case EXPONENTIATION:
+                            throw new ExpressionParseException("succeeding operators");
+                        case EQUALITY:
+                        case OPEN_PARENTHESES:
+                            throw new ExpressionParseException("hanging operator");
+                    }
+                    break;
+            }
+        }
+
+        if (parenthesesCount > 0)
+            throw new ExpressionParseException("unclosed parentheses");
+        else if (parenthesesCount < 0)
+            throw new ExpressionParseException("too many close parentheses");
     }
 }
