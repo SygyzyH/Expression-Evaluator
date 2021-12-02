@@ -63,7 +63,7 @@ Thus, we can derive that
 
 Is equivelant to
 
-![alt text](https://latex.codecogs.com/svg.latex?e^{\left(\ln\left(r\right)i\varphi\right)\left(c+di\right)})
+![alt text](https://latex.codecogs.com/svg.latex?e^{\left(\ln\left(r\right)+i\varphi\right)\left(c+di\right)})
 
 Using power rules. We can simplify the expression slightly to seperate real and complex components
 
